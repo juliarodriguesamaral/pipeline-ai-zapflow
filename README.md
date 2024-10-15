@@ -14,6 +14,10 @@
 ```
 pip install -r requirements.txt
 ``` 
+**3.1 Caso haja problemas na instalação do streamlit, use o binário pré compilado abaixo**
+```
+pip install --only-binary=:all: streamlit
+```
     
 
 ### Rodar com Docker
