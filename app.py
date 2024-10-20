@@ -2,6 +2,7 @@ import streamlit as st
 from datetime import datetime
 from data_contract import Sales
 from pydantic import ValidationError
+from database import save_sales_data
 
 def main ():
     st.title("ZapFlow CRM and Sales System")
@@ -15,8 +16,7 @@ def main ():
 
     if st.button("Salvar"):
         date_time= datetime.combine(date, time)
-        result = create_and_validate_sale(email, date_time, product, price, quantity)
-        st.write(result)
+        create_and_validate_sale(email, date_time, product, price, quantity)
 
 def create_and_validate_sale(email, date_time, product, price, quantity):
     try:    
@@ -28,7 +28,7 @@ def create_and_validate_sale(email, date_time, product, price, quantity):
             price = price,
             quantity = quantity
         )
-        st.write(sale)
+        save_sales_data(sale)
     	
     except ValidationError as e:
         st.error(f"Try again. Error {e}")

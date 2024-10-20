@@ -1,2 +1,5 @@
 streamlit
 pydantic[email]
+psycopg2-binary
+sqlalchemy
+python-dotenv
