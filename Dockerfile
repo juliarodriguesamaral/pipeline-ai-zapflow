@@ -8,10 +8,12 @@ ENV PYTHONUNBUFFERED=1
 # Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Instala dependências do sistema necessárias, incluindo build-essential e cmake
+# Instala dependências do sistema necessárias, incluindo build-essential, cmake e git
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
+    git \
+    openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Atualiza o pip
