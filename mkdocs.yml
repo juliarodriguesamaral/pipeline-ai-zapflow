@@ -1,0 +1,8 @@
+site_name: Documentation for the ZapFlow CRM and Sales System
+
+theme: 
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings

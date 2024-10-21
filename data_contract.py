@@ -8,6 +8,16 @@ class ProductEnum(str, Enum):
         ZAPFLOW_LLAMA = "Zapflow with Lhama 3.0"
 
 class Sales(BaseModel):
+    """
+    Data model for sales.
+
+    Args:
+        email (EmailStr): Client's email address
+        date (datetime): Sale date
+        product (ProductEnum): Product category
+        price (PositiveFloat): Product price
+        quantity (PositiveInt): Product quantity
+    """
     email: EmailStr
     date: datetime
     product: ProductEnum

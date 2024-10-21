@@ -35,3 +35,14 @@ docker run -d -p 8501:8501 --name streamlit-container -v "C:\Documents\Workspace
 **3. Acessar a aplicação**
 
 Abra no navegador: [http://localhost:8501](http://localhost:8501)
+
+
+### Executar MkDocs localmente - Documentação do projeto
+
+**1. Rodar MkDocs**
+```
+mkdocs serve
+```
+
+**2. Acessar mkdocs**
+Abra no navegador: [http://localhost:8000](http://localhost:8000)
