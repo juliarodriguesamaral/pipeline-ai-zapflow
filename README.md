@@ -1,4 +1,4 @@
-### Configuração de ambiente
+## Configuração de ambiente
 
 **1. Criar ambiente virtual**
    ``` 
@@ -20,7 +20,7 @@ pip install --only-binary=:all: streamlit
 ```
     
 
-### Rodar com Docker
+## Rodar com Docker
 
 **1. Criar a imagem Docker**
 ```
@@ -37,8 +37,9 @@ docker run -d -p 8501:8501 --name streamlit-container -v "C:\Documents\Workspace
 Abra no navegador: [http://localhost:8501](http://localhost:8501)
 
 
-### Executar MkDocs localmente - Documentação do projeto
+## Acessar MkDocs - Documentação do projeto
 
+### Localmente
 **1. Rodar MkDocs**
 ```
 mkdocs serve
@@ -46,3 +47,6 @@ mkdocs serve
 
 **2. Acessar mkdocs**
 Abra no navegador: [http://localhost:8000](http://localhost:8000)
+
+### Através do github
+Abra no navegador: [https://juliarodriguesamaral.github.io/pipeline-ai-zapflow/](https://juliarodriguesamaral.github.io/pipeline-ai-zapflow/)
