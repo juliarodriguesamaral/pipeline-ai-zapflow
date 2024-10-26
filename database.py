@@ -17,7 +17,8 @@ def connect_in_database():
         host = DB_HOST,
         database = DB_NAME,
         user = DB_USER,
-        password = DB_PASS
+        password = DB_PASS,
+        connect_timeout = 10 
     )
     cursor = conn.cursor()
     return conn, cursor
