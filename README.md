@@ -36,6 +36,28 @@ docker run -d -p 8501:8501 --name streamlit-container -v "C:\Documents\Workspace
 
 Abra no navegador: [http://localhost:8501](http://localhost:8501)
 
+## Dockerfile.populate_db 
+
+Este Dockerfile tem como objetivo criar e executar um container Docker que populará a tabela `sales` no banco de dados. Ele utiliza um script Python que gera 10.000 registros aleatórios de vendas, usando a biblioteca `Faker` para dados fictícios.
+
+### Passos para Executar
+
+**1. Criar a imagem Docker**
+
+No terminal, execute o seguinte comando para construir a imagem a partir do `Dockerfile.populate_db`:
+
+```sh
+docker build -f Dockerfile.populate_db -t populate-db .
+```
+
+**2. Criar e executar o container**
+
+Depois que a imagem for criada, execute o comando abaixo para iniciar o container e popular a tabela:
+
+```sh
+docker run --name populate-sales-table --network="host" populate-db
+```
+
 
 ## Acessar MkDocs - Documentação do projeto
 
