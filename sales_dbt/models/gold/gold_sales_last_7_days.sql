@@ -10,7 +10,7 @@ WITH sales_last_7_days AS (
     FROM
         {{ ref('silver_sales') }}
     WHERE
-        date >= CURRENT_DATE - INTERVAL '30 days'
+        date >= CURRENT_DATE - INTERVAL '7 days'
     GROUP BY
         date, product
 )
