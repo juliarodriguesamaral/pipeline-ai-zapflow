@@ -1,5 +1,7 @@
 ## Configuração de ambiente
 
+**Versão do Python utilizada: 3.11**
+
 **1. Criar ambiente virtual**
    ``` 
    python -m venv .venv
