@@ -5,7 +5,7 @@ WITH cleaned_data AS (
         email,
         DATE(date) AS date,
         product,
-        price,
+        ROUND(CAST(price AS DECIMAL(10,2)) ,2) as price,
         quantity
     FROM
         {{ ref('bronze_sales') }}
